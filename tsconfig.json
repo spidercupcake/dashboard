@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",                       // Required for React 17+ JSX transform
+    "strict": true,                           // Enable strict type checking
+    "target": "es6",                          // Modern ECMAScript target
+    "module": "esnext",                       // Use ES modules
+    "moduleResolution": "node",              // Resolve modules using Node.js style
+    "esModuleInterop": true,                  // Enable default imports for CommonJS
+    "skipLibCheck": true                      // Skip type checks for node_modules
+  },
+  "include": ["src"],                         // Ensure your source folder is included
+  "exclude": ["node_modules"]
+}

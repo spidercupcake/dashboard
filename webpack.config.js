@@ -1,9 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js", // or "./src/index.jsx" if you're using JSX
+  entry: "./src/index.tsx", // or "./src/index.jsx" if you're using JSX
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -12,24 +11,37 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/, // Handle .ts and .tsx files
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: ["babel-loader"],
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        test: /\.js$/, // Handle .js files
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react',
+              '@babel/preset-typescript', // Add TypeScript support to Babel
+            ],
+          },
+        },
+      },
+      {
+        test: /\.css$/, // Handle CSS files if needed
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(), // Optional: cleans output directory
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
   ],
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   devServer: {
     static: {
