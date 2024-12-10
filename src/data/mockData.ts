@@ -40,6 +40,15 @@ export const projectStatus = [
     { message: 'New comment on project "Marketing Campaign".', time: '2 hours ago' },
     { message: 'Your subscription is due for renewal in 7 days.', time: '3 hours ago' },
   ]
+
+  export const tableColumns = [
+    { key: 'id', header: 'ID' },
+    { key: 'name', header: 'Name' },
+    { key: 'sharedOn', header: 'Shared On' },
+    { key: 'reshared', header: 'Reshared' },
+    { key: 'status', header: 'Status' },
+    { key: 'comments', header: 'Comments' },
+  ]
   
   export const tableData = [
     { id: 583, name: 'Francene Vandyne', sharedOn: 'Jan 11, 2023 at 01:49 pm', reshared: '1 items', status: 'Added', comments: 'Elegant and versatile, these Light Sage Pants are a must-h...' },
@@ -48,5 +57,6 @@ export const projectStatus = [
     { id: 274, name: 'Chieko Chute', sharedOn: 'Feb 21, 2023 at 03:05 pm', reshared: '7 items', status: 'Added', comments: 'Give a flattering silhouette, making them perfect for both ca...' },
     { id: 994, name: 'Darcel Ballentine', sharedOn: 'Aug 3, 2023 at 12:10 am', reshared: '3 items', status: 'Added', comments: 'Pair with a fitted blouse for a day at the office or a relaxed...' },
   ]
+  
   
   

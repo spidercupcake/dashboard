@@ -4,6 +4,7 @@ import { Charts } from './components/Charts'
 import { ActivityLog } from './components/ActivityLog'
 import { Notifications } from './components/Notifications'
 import { DataTable } from './components/DataTable'
+import { tableColumns, tableData } from './data/mockData'
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
           <ActivityLog />
           <Notifications />
         </div>
-        <DataTable />
+        <DataTable columns={tableColumns} data={tableData} />
       </main>
     </main>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Bell } from 'lucide-react'
-import { notifications } from '../data/mockData.ts'
+import { notifications } from '../data/mockData'
 
 export const Notifications = () => {
   return (
