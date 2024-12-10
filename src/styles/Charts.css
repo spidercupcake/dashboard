@@ -1,0 +1,33 @@
+.charts-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .chart-card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    border: 2px solid black;
+  }
+  
+  .chart-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .charts-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .charts-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

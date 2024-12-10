@@ -1,0 +1,39 @@
+.metrics-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .metric-card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    border: 2px solid black;
+    text-align: left;
+  }
+  
+  .metric-label {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 8px;
+  }
+  
+  .metric-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  @media (min-width: 768px) {
+    .metrics-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .metrics-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  

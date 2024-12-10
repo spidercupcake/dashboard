@@ -1,0 +1,60 @@
+.data-table-container {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    border: 2px solid black;
+    overflow-x: auto;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table-header {
+    padding: 8px;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid black;
+  }
+  
+  .data-table-row {
+    border-top: 2px solid black;
+  }
+  
+  .data-table-cell {
+    padding: 8px;
+    color: black;
+  }
+  
+  .data-table-name {
+    display: flex;
+    align-items: center;
+  }
+  
+  .data-table-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .data-table-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .data-table-status-added {
+    background-color: #d4f3d4;
+    color: #228b22;
+  }
+  
+  .data-table-status-removed {
+    background-color: #fcd4d4;
+    color: #b22222;
+  }
+  
